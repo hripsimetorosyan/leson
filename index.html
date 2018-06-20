@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head lang="no">
+	<meta charset="utf-8">
+	<title>forms </title>
+
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+	
+	<form >
+		
+		
+		
+		<input type="radio" id="demo1"
+     name="contact"  value = "email">
+      <label for="contactChoice2">girl</label>
+      <input type="radio" id="demo2"
+     name="contact"  value = "email">
+      <label for="contactChoice2">boy</label>
+   
+   
+   
+
+    
+            <br>
+
+            
+          
+
+         <input type="checkbox" id="name1" name="subscribe" value="obj1" onclick="myfunction()" >
+          <label for="subscribeNews">Do you like to read books?</label>
+         
+       
+       <br>
+       
+
+         <select  id="demo"  onchange="myAnswer()">
+          	
+          	<option value="Armenia">Armenia</option>
+          	<option value="USA">USA</option>
+          	<option value="French">French</option>
+          	<option value="Brazil ">Brazil </option>
+          	<option value="Singapore">Singapore</option>
+          	<option value="India ">India </option>
+          	<option value="Mecsico ">Mecsico </option>
+        </select> 
+     <br>
+    
+<label for="uname">Choose a book </label>
+ <input type="text" id="uname" name="bla" onkeyup=" writeMessage()"><br>
+ 
+ <br>
+<p id="dmux"></p>
+      <input type="submit" value="search" >
+
+	</form> 
+
+	<script type="text/javascript">
+		function myAnswer(){
+			var prefer = document.forms[0].demo.value;
+    alert("from " + prefer);
+		}
+
+	function writeMessage() {
+    document.getElementById("dmux").innerHTML = document.forms[0].bla.value;
+}
+function myfunction (){
+	var x=document.getElementById("name1");
+	if (x.checked==true) {
+		alert("yes ")
+	}else
+	alert("no");
+}
+
+	</script>
+
+
+	
+
+</body>
+</html>
