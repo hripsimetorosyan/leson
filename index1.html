@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+ <title></title>
+
+</head>
+
+<body>
+
+<p id="obj"  > </p>
+
+
+<script>
+
+
+var product= {
+
+         name:"dress",
+		 
+
+        weather: "summer",
+
+         rating:[3,4,5],
+
+         votes:950,
+
+         price:4.85,
+
+         color:["red", "green", "blue", "white"],
+
+         size:["x","xx","l","xl"],
+
+         quantity:[1,2,3,4],
+
+       
+
+         getW: function(){
+
+         return (this.weather  + "  " +     "colection");
+
+         },
+
+       
+
+         getR:function(){
+
+         if(this.votes <=950){
+
+         return ("retig is"+this.rating[0]);
+
+         }else
+
+         if(this.votes==950){
+
+         return ("retig is"+this.rating[1]);
+
+       
+
+         }else
+
+         return("retig is"+this.rating[2]);
+
+       
+
+       
+
+         },
+
+       
+
+         getC: function(){
+
+         if(this.color[0]){
+
+          return ( this.size[0]     + "  " +  this.color[0]);
+
+         }else
+
+         if(this.color[1]){
+
+          return ( this.size[1]  + " "  + this.color[1]);
+
+         } else
+
+         if(this.color[2]){
+
+          return( this.size[2]  + "  " +  this.color[2]);
+
+         } else
+
+          return( this.size[3]  + "  " +  this.color[3]);
+
+          },
+
+       
+
+       
+
+          getP: function(){
+
+          if(this.quantity[0]){
+
+          return ("price" + "  " +this.price*1);
+
+         }else
+
+         if(  this.quantity[1]){
+
+          return("price" + "  " +this.price*2);
+
+         } else
+
+         if(this.quantity[2]){
+
+         return("price" + "  " +this.price*3);
+
+         } else
+
+          return("price" +"  " + this.price*4);
+
+          },
+
+       
+
+}
+
+function myObj(){
+ document.getElementById("obj").innerHTML=  product.name +'<br>'+product.getR() + '<br>'+product.getW()+'<br>'+product.getC() + '<br>'+product.getP()+'<br>';
+
+}
+ 
+
+ 
+
+</script>
+ <button onclick=" myObj()">dreses</button>
+
+</body>
+
+</html>
